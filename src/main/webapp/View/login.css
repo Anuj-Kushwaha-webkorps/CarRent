@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+html{
+    margin : 0px;
+    height: 100%;
+    width : 100%;
+    background-color: blue;
+    background: linear-gradient(230deg, rgba(11, 141, 234, 0.469), rgba(227, 19, 126, 0.403));
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap : 10px;
+}
+
+.logo{
+    height: 100%;
+    color: purple;
+    font-size: 1.5rem;
+}
+
+.logo img{
+    height: 80px;
+    width: 80px;
+}
+
+form{
+    width : 80%;
+    height : 40vh;
+    flex-direction: column;
+    background-color: white;
+    margin: auto;
+    margin-top : 30px;
+    border-radius: 20px;
+    gap : 5px;
+    text-align: center;
+    padding-top : 25px;
+    box-shadow: 0px 0px 2px 2px gray;
+}
+input{
+    padding : 15px;
+    padding-left : 35px;
+    margin: 10px;
+    width : 70%;
+    outline : none;
+    border: none;
+    border-radius: 10px;
+    background-color: lightgray;
+    /* text-align: center; */
+   
+}
+input::placeholder{
+    color : black;
+    font-size: 1rem;
+}
+.left{
+    position: relative;
+    left : 35px;
+
+}
+
+button{
+    width : 40%;
+    margin-top : 20px;
+    padding : 10px 10px;
+    font-size: 1.1rem;
+    color : white;
+    font-weight: 600;
+    background-color: #7306A7;
+    border: none;
+    border-radius: 10px;
+  }
+  button a{
+    color : white;
+    text-decoration: none;
+  }
+
+  @media  screen and (min-width : 750px) {
+    form{
+        width: 55%;
+        height: 30vh;
+    }
+  }
+  @media  screen and (min-width : 900px) {
+    form{
+        width: 40%;
+        height: 35vh;
+    }
+  }
