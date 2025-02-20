@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
     
     
 <!DOCTYPE html>
@@ -7,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
+    <title>Dashboard</title>
     <link rel="icon" href="logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="<%= request.getContextPath() %>/View/login.css">
 
@@ -18,6 +19,41 @@
   
   <!-- fontawsome link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <style>
+  
+  	main{
+  		width : 25%;
+    height : 30vh;
+    flex-direction: column;
+    background-color: white;
+    margin: auto;
+    margin-top : 30px;
+    border-radius: 20px;
+    gap : 5px;
+    text-align: center;
+    padding-top : 25px;
+    box-shadow: 0px 0px 2px 2px gray;
+  	}
+  	.adminDashboard{
+  		display : flex;
+		flex-direction: column;
+    	align-items: center;
+    	justify-content : center;
+    	text-align: center;  		
+  		list-style: none;
+  		text-decoration : none;
+  		padding : 0px;
+  	}
+  	.adminDashboard li{
+  		padding : 5px;
+  	}
+  	.adminDashboard li a{
+  		font-size : 20px;
+  		text-decoration : none;
+  		padding : 5px;
+  	}
+  </style>
 </head>
 <body>
     <header>
@@ -29,19 +65,15 @@
           </div>
     </header>
 
-    <main>
-        <form  method="post" action="/CarManagement/controller/LoginUser.jsp" >
-            <i class="fa-solid fa-user left"></i><input type="text" placeholder="Email Member Number" id="username" name = "membershipNumber" ><br>
-           
-            <i class="fa-solid fa-lock left"></i><input type="password" placeholder="Enter password" id="password" name="password"><br>
-            
-            <label class="form-label">Select user type :</label>
-			<select class="form-select" name="user" required>
-                    <option  value="admin">Admin</option>
-                    <option value="customer" selected>Customer</option>
-            </select><br>
-            <button type="submit">Login</button>
-        </form>
+    <main >
+    	<ul class ="adminDashboard">
+    		<li><a href="/CarManagement/View/adminList.jsp" >View Admins</a> </li> 
+        
+    		<li><a href="/CarManagement/View/currentBooking.jsp" >View Current Booking</a> </li> 
+        
+    		<li><a href="/CarManagement/View/previousBookings.jsp" >Past Booking</a> </li> 
+    	</ul>
+        
     </main>
 </body>
 </html>

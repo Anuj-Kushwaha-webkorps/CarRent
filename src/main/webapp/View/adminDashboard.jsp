@@ -68,12 +68,10 @@
     <main >
     	<ul class ="adminDashboard">
     		<li><a href="/CarManagement/View/addVehicle.jsp" >Add Vehicle</a> </li> 
-                
-    		<li><a href="" >Delete Vehicle</a> </li> 
         
-    		<li><a href="" >View Vehicle</a> </li> 
+    		<li><a href="/CarManagement/viewVehicle" >View Vehicle</a> </li> 
         
-    		<li><a href="" >Booking List</a> </li> 
+    		<li><a href="/CarManagement/View/bookingHistory.jsp" >Booking List</a> </li> 
     	</ul>
         
     </main>

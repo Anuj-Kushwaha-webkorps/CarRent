@@ -31,20 +31,20 @@
     </header>
 
     <main >
-        <form style="height: 74vh;" method="post" action="/CarManagement/addAdmin" >
+        <form style="height: 74vh;" method="post" action="/CarManagement/addVehicle" >
             <h1 style="margin: 0px; padding: 0px;">Vehicle</h1>
-            <i class="fa-solid fa-car left"></i><input type="text" name="vehicle_name" placeholder="Enter vehicle name " required><br>
+            <i class="fa-solid fa-car left"></i><input type="text" name="name" placeholder="Enter vehicle name " required><br>
 
             <i class="fa-solid fa-copyright left"></i><input type="text" name="brand" placeholder="Enter brand name " required><br>
 
             <i class="fa-solid fa-hexagon-nodes"></i><input type="text" name="model" placeholder="Enter model " required><br>
 
-            <i class="fa-solid fa-indian-rupee-sign left"></i><input type="number" name="rental_price_per_hour" placeholder="Enter rental price per hour" required><br>
+            <i class="fa-solid fa-indian-rupee-sign left"></i><input type="number" name="rental_price_per_hr" placeholder="Enter rental price per hour" required><br>
 
             <label class="form-label">Fuel Type:</label>
-			<select class="form-select" name="availability_status" required>
-                    <option value="true">Available</option>
-                    <option value="false">Not Available</option>
+			<select class="form-select" name="availability" required>
+                    <option value="Available">Available</option>
+                    <option value="Not_Available">Not Available</option>
             </select><br>
             
              <!-- Fuel Type -->

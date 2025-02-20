@@ -36,4 +36,55 @@
   	<url-pattern>/addAdmin</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+  	<servlet-name>addVehicle</servlet-name>
+  	<jsp-file>/controller/AddVehicle.jsp</jsp-file>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>addVehicle</servlet-name>
+  	<url-pattern>/addVehicle</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  	<servlet-name>viewVehicle</servlet-name>
+  	<jsp-file>/controller/ViewVehicle.jsp</jsp-file>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>viewVehicle</servlet-name>
+  	<url-pattern>/viewVehicle</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>deleteVehicle</servlet-name>
+  	<jsp-file>/controller/DeleteVehicle.jsp</jsp-file>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>deleteVehicle</servlet-name>
+  	<url-pattern>/deleteVehicle</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>editVehicle</servlet-name>
+  	<jsp-file>/controller/editVehicle.jsp</jsp-file>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>editVehicle</servlet-name>
+  	<url-pattern>/editVehicle</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>getBookedDates</servlet-name>
+  	<jsp-file>/controller/getBookedDates.jsp</jsp-file>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>getBookedDates</servlet-name>
+  	<url-pattern>/getBookedDates</url-pattern>
+  </servlet-mapping>
+  
 </web-app>

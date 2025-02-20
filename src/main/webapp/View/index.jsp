@@ -1,5 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+    
+    <%
+    String userType = null; // This will store whether it's an admin or customer
+
+    Cookie[] cookies = request.getCookies();
+    if (cookies != null) {
+        for (Cookie cookie : cookies) {
+            if ("admin_id".equals(cookie.getName())) {
+                userType = "admin";
+                break;
+            } else if ("customer_id".equals(cookie.getName())) {
+                userType = "customer";
+                break;
+            }
+        }
+    }
+%>
 
     <!DOCTYPE html>
 <html lang="en">
@@ -42,9 +60,16 @@
       </div>
      
       <div class="btn-nav">
-      <button class="login btn"><a href="/CarManagement/View/login.jsp">Login</a></button>
-      <button class = "signup btn"><a href="/CarManagement/View/registerAdmin.jsp">SignUp Admin</a></button>
-      <button class = "signup btn"><a href="/CarManagement/View/registerUser.jsp">SignUp User</a></button>
+      
+      <% if (userType == null) { %>
+            <!-- Show login button if user is not logged in -->
+		      <button class="login btn"><a href="/CarManagement/View/login.jsp">Login</a></button>
+		      <button class = "signup btn"><a href="/CarManagement/View/registerAdmin.jsp">SignUp Admin</a></button>
+		      <button class = "signup btn"><a href="/CarManagement/View/registerUser.jsp">SignUp User</a></button>
+	  <% } else { %>
+            <!-- Show logout button if user is logged in -->
+		      <button class="login btn"><a href="/CarManagement/controller/logout.jsp">Logout</a></button>
+        <% } %>
       
       </div>
     </div>

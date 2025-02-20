@@ -14,9 +14,9 @@ class="com.carmanagement.entity.Customer" scope="page">
 JdbcOperations jdOperation = new JdbcOperations();
 
 if(jdOperation.addCustomer(admin)){
-	response.sendRedirect("View/index.jsp");
+	response.sendRedirect("/CarManagement/View/login.jsp");
 }else{
-	response.sendRedirect("login.jsp");
+	response.sendRedirect("/CarManagement/View/index.jsp");
 }
 
  %>

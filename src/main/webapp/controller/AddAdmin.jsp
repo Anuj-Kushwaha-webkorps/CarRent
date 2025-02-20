@@ -19,6 +19,9 @@ int adminId = jdOperation.addAdmin(admin);
 if(adminId>0){
 	//set session
     session.setAttribute("admin_id", adminId);
+	
+	String msg = "Yups! your account is created successfully. Login with MemberShipNumber : " + adminId;
+	jdOperation.sendEmail(admin.getEmail(), "login credential of CarRent", msg);
 
     // Set cookie (7 days)
     Cookie adminCookie = new Cookie("admin_id", String.valueOf(adminId));
